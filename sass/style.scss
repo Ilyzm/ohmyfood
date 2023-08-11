@@ -12,6 +12,11 @@ a {
     text-decoration: none;
 }
 
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$background-color: #f7f7f7;
+
 /*** Header ***/
 .Logo {
     font-family: "Shrikhand", cursive;
@@ -42,4 +47,212 @@ a {
 input::placeholder {
     color: black;
     /* Changer la couleur du texte du placeholder en noir */
+}
+
+.pin {
+    width: 12px;
+    height: 16px;
+
+}
+
+.custom-input {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    border-width: 0px;
+    background-color: #EAEAEA;
+    text-align: center;
+}
+
+.header-end {
+    background-color: $background-color ;
+
+
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin-right: 34px;
+        margin-left: 33px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: #353535;
+    }
+}
+
+.btn {
+    margin: 0px 0px 55px;
+    padding: 13px 19px;
+    background: var(--button-gradient, linear-gradient(125deg, #9356DC 0%, #FF79DA 100%));
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background: var(--button-gradient, linear-gradient(125deg, #9d78cc 0%, #e98ccf 100%));
+    box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+/*** Fonctionnement ***/
+
+.sub-title {
+    padding: 20px 20px 0px;
+}
+
+.fonctionnement {
+    list-style: none;
+    padding-left: 0px;
+
+    p {
+        position: absolute;
+        left: 20px;
+        color: white;
+        background-color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        height: 17px;
+        width: 17px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    i {
+        padding-left: 10px;
+    }
+}
+
+.fa-mobile-screen-button {
+    color: #7e7e7e;
+}
+
+.fa-list-ul {
+    color: #7e7e7e;
+}
+
+.fa-store {
+    color: $primary-color;
+}
+
+.fonctionnement-border {
+    background-color: $background-color;
+    border-radius: 20px;
+    padding: 15px;
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    margin: 22px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+}
+
+
+
+
+/*** Restaurants ***/
+
+.restaurants {
+    background-color: $background-color;
+    box-sizing: border-box;
+    padding: 25px 20px 20px 20px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .new {
+        position: relative;
+    }
+
+    .new::before {
+        content: "Nouveau";
+        position: absolute;
+        height: 32px;
+        width: 70px;
+        background-color: $tertiary-color;
+        color: #008766;
+        display: grid;
+        place-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        right: 16px;
+        top: 16px
+    }
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    img {
+        width: 100%;
+        border-radius: 15px;
+        height: 141px;
+        object-fit: cover;
+    }
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 30px;
+    position: relative;
+
+    h4 {
+        margin-top: 15px;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    p {
+        margin-top: 0px;
+    }
+
+    i {
+        font-size: 20px;
+        position: absolute;
+        right: 16px;
+    }
+}
+
+.heart-full {
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.heart-full:hover {
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(125deg, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
