@@ -58,6 +58,11 @@ main {
   width: 45px;
 }
 
+h2 i {
+  position: absolute;
+  right: 20%;
+}
+
 .heart-full {
   opacity: 0;
   transition-property: all;
@@ -100,6 +105,14 @@ main {
   animation-delay: 300ms;
 }
 
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .price {
   font-weight: 700;
   right: 35px;
@@ -237,6 +250,9 @@ main {
     width: 75%;
     margin: auto;
     margin-top: -35px;
+  }
+  h2 i {
+    right: 36%;
   }
   .menu {
     width: 65%;
