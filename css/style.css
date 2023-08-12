@@ -12,6 +12,42 @@ a {
   text-decoration: none;
 }
 
+/*** Loader ***/
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  height: 100vh;
+  inset: 0;
+  background-color: white;
+  opacity: 0.9;
+  animation: loaderanim 150ms 3s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  animation: spin 3s linear;
+  height: 100px;
+  width: 100px;
+  border: 5px solid transparent;
+  border-top: 5px solid #9356DC;
+  border-radius: 50%;
+}
+
+@keyframes loaderanim {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*** Header ***/
 .Logo {
   font-family: "Shrikhand", cursive;
@@ -61,7 +97,6 @@ input::placeholder {
 .header-end {
   background-color: #f7f7f7;
 }
-
 .header-end h2 {
   font-weight: 700;
   font-size: 24px;
@@ -69,7 +104,6 @@ input::placeholder {
   margin-right: 34px;
   margin-left: 33px;
 }
-
 .header-end p {
   font-weight: 300;
   font-size: 18px;
@@ -109,7 +143,6 @@ input::placeholder {
   list-style: none;
   padding-left: 0px;
 }
-
 .fonctionnement p {
   position: absolute;
   left: 20px;
@@ -124,7 +157,6 @@ input::placeholder {
   font-size: 12px;
   font-weight: 500;
 }
-
 .fonctionnement i {
   padding-left: 10px;
 }
@@ -166,11 +198,9 @@ input::placeholder {
   display: flex;
   flex-wrap: wrap;
 }
-
 .container .new {
   position: relative;
 }
-
 .container .new::before {
   content: "Nouveau";
   position: absolute;
@@ -195,7 +225,6 @@ input::placeholder {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
-
 .card img {
   width: 100%;
   border-radius: 15px;
@@ -210,7 +239,6 @@ input::placeholder {
   padding-right: 30px;
   position: relative;
 }
-
 .card-content h4 {
   margin-top: 15px;
   margin-bottom: 0px;
@@ -218,11 +246,9 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
 }
-
 .card-content p {
   margin-top: 0px;
 }
-
 .card-content i {
   font-size: 20px;
   position: absolute;
@@ -249,7 +275,6 @@ input::placeholder {
   list-style: none;
   padding: 1px 20px;
 }
-
 .footer p {
   font-family: "Shrikhand", cursive;
   color: white;
@@ -262,18 +287,15 @@ input::placeholder {
   display: flex;
   flex-direction: column;
 }
-
 .footer-list li {
   color: white;
   font-weight: 400;
   padding-bottom: 7px;
 }
-
 .footer-list i {
   color: white;
   gap: 10px;
 }
-
 .footer-list a {
   color: white;
 }
@@ -286,30 +308,24 @@ input::placeholder {
     margin: auto;
     justify-content: center;
   }
-
   .fonctionnement p {
     position: relative;
     left: -20px;
   }
-
   .fonctionnement i {
     margin-left: -30px;
   }
-
   .sub-title {
     width: 60%;
     margin: auto;
   }
-
   .fonctionnement-border {
     padding: 15px 40px 15px 10px;
   }
-
   .restaurants h3 {
     width: 60%;
     margin: auto;
   }
-
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -318,13 +334,11 @@ input::placeholder {
     margin: auto;
     gap: 20px;
   }
-
   .card {
     flex-basis: 40%;
     max-width: 50%;
     margin: 20px;
   }
-
   .footer {
     display: flex;
     flex-wrap: wrap;
@@ -333,14 +347,12 @@ input::placeholder {
     gap: 50px;
     padding-top: 25px;
   }
-
   .footer-list {
     display: flex;
     flex-direction: row;
     gap: 30px;
     padding-top: 25px;
   }
-
   .footer-list li {
     display: flex;
     gap: 15px;
